@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- saved from url=(0050)-->
 <html
-  lang="ru"
+  lang="en"
   data-wf-domain="ekaterinas-sublime-site-4357b6.webflow.io"
   data-wf-page="69b23bfc92235defbf7c71d0"
   data-wf-site="69b23bfb92235defbf7c718c"
@@ -12,34 +12,16 @@
     <script>
       (function () {
         var savedLang = localStorage.getItem("site-lang");
-        var browserLang = (
-          navigator.language ||
-          navigator.userLanguage ||
-          ""
-        ).toLowerCase();
         var path = window.location.pathname;
 
-        // Если пользователь уже выбрал EN — сразу ведём на английскую версию
-        if (savedLang === "en") {
-          if (path === "/" || path.endsWith("/index.html")) {
-            window.location.replace("/en/");
-          }
-          return;
-        }
-
-        // Если пользователь уже выбрал RU — остаёмся на русской версии
         if (savedLang === "ru") {
+          if (path.startsWith("/en/")) {
+            window.location.replace("/");
+          }
           return;
         }
 
-        // Если язык ещё не выбран — определяем по языку браузера
-        if (path === "/" || path.endsWith("/index.html")) {
-          if (!browserLang.startsWith("ru")) {
-            window.location.replace("/en/");
-          } else {
-            localStorage.setItem("site-lang", "ru");
-          }
-        }
+        localStorage.setItem("site-lang", "en");
       })();
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -48,11 +30,11 @@
         outline: none;
       }
     </style>
-    <title>My Portrait — AI фотосессия</title>
+    <title>My Portrait — AI Photoshoot</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     <link
-      href="./assets/ekaterinas-sublime-site-4357b6.webflow.shared.d69b3212a.css"
+      href="../assets/ekaterinas-sublime-site-4357b6.webflow.shared.d69b3212a.css"
       rel="stylesheet"
       type="text/css"
       integrity="sha384-1psyEqMc+QN7KKIRLb9+osqgpLfpocuu9thCKETKTWvB2XGjxds3gNKUhiPZKUjK"
@@ -68,8 +50,8 @@
             (n.className += t + "touch"));
       })(window, document);
     </script>
-    <link href="icon.png" rel="shortcut icon" type="image/png" />
-    <link href="icon.png" rel="apple-touch-icon" type="image/png" />
+    <link href="../icon.png" rel="shortcut icon" type="image/png" />
+    <link href="../icon.png" rel="apple-touch-icon" type="image/png" />
     <!-- Keep this css code to improve the font quality-->
     <style>
       * {
@@ -400,7 +382,7 @@
               sizes="66px"
               height="44px"
               alt=""
-              src="./assets/logo.webp"
+              src="../assets/logo.webp"
               loading="eager"
               class="navbar13_logo"
           /></a>
@@ -411,14 +393,12 @@
           >
             <div class="navbar13_menu-link-wrapper">
               <a href="#types" class="navbar13_link w-nav-link"
-                >Виды фотосессий</a
-              ><a href="#example" class="navbar13_link w-nav-link">Примеры</a
-              ><a href="#tariff" class="navbar13_link w-nav-link">Тарифы</a
+                >Photoshoot Types</a
+              ><a href="#example" class="navbar13_link w-nav-link">Examples</a
+              ><a href="#tariff" class="navbar13_link w-nav-link">Pricing</a
               ><a href="#photo-shoot-steps" class="navbar13_link w-nav-link"
-                >Как проходит фотосессия</a
-              ><a href="#questions" class="navbar13_link w-nav-link"
-                >Часто задаваемые вопросы</a
-              >
+                >How It Works</a
+              ><a href="#questions" class="navbar13_link w-nav-link">FAQ</a>
             </div>
           </nav>
           <div
@@ -429,7 +409,7 @@
               href="https://t.me/myportrait_ai_bot"
               target="_blank"
               class="button is-small w-button"
-              >Открыть бот в Telegram</a
+              >Open the Telegram Bot</a
             >
             <div
               class="navbar13_menu-button w-nav-button"
@@ -465,16 +445,17 @@
             >
               <div class="margin-bottom margin-small">
                 <h1 class="heading-style-h1">
-                  AI-фотосессия без студии<br />с участием фотографа и стилиста
+                  AI Photoshoot Without a Studio <br />
+                  —crafted with a photographer and stylist
                 </h1>
               </div>
               <p class="text-size-medium">
-                Загрузите фото в Telegram-бот и получите портреты, собранные как
-                настоящая фотосессия — с продуманным стилем, светом и ручной
-                доработкой каждого кадра.<br />Подойдёт для профиля, соцсетей и
-                личного бренда.<br /><br />Это не случайная генерация.<br />Каждый
-                фотосет собирается как настоящая съёмка и дорабатывается в
-                ручную.
+                Upload your photos to the Telegram bot and receive portraits
+                created like a real photoshoot — with carefully selected
+                styling, lighting, and manual refinement of every shot.<br />Perfect
+                for your profile, social media, and personal brand.<br /><br />This
+                is not random generation.<br />Each photoset is built like a
+                real shoot and refined by hand.
               </p>
               <div class="margin-top margin-medium">
                 <div class="button-group">
@@ -482,9 +463,9 @@
                     href="https://t.me/myportrait_ai_bot"
                     target="_blank"
                     class="button w-button"
-                    >Начать фотосессию в Telegram</a
+                    >Start Your Photoshoot in Telegram</a
                   ><a href="#example" class="button is-secondary w-button"
-                    >Смотреть примеры</a
+                    >View Examples</a
                   >
                 </div>
               </div>
@@ -514,7 +495,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f7b-bf7c71d0"
                         sizes="(max-width: 666px) 100vw, 666px"
                         alt=""
-                        src="./assets/studio7.webp"
+                        src="../assets/studio7.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -526,7 +507,7 @@
                       <img
                         sizes="(max-width: 667px) 100vw, 667px"
                         alt=""
-                        src="./assets/men4.webp"
+                        src="../assets/men4.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -539,7 +520,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f7f-bf7c71d0"
                         sizes="(max-width: 668px) 100vw, 668px"
                         alt=""
-                        src="./assets/studio6.webp"
+                        src="../assets/studio6.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -549,7 +530,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f82-bf7c71d0"
                         sizes="(max-width: 670px) 100vw, 670px"
                         alt=""
-                        src="./assets/office4.webp"
+                        src="../assets/office4.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -562,7 +543,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f84-bf7c71d0"
                         sizes="(max-width: 667px) 100vw, 667px"
                         alt=""
-                        src="./assets/studio1.webp"
+                        src="../assets/studio1.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -575,7 +556,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f86-bf7c71d0"
                         sizes="(max-width: 669px) 100vw, 669px"
                         alt=""
-                        src="./assets/men6.webp"
+                        src="../assets/men6.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -590,7 +571,7 @@
                         id="w-node-bed469f1-bc79-b8c0-aef6-b458f424ca71-bf7c71d0"
                         sizes="(max-width: 666px) 100vw, 666px"
                         alt=""
-                        src="./assets/studio7.webp"
+                        src="../assets/studio7.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -602,7 +583,7 @@
                       <img
                         sizes="(max-width: 667px) 100vw, 667px"
                         alt=""
-                        src="./assets/men4.webp"
+                        src="../assets/men4.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -615,7 +596,7 @@
                         id="w-node-bed469f1-bc79-b8c0-aef6-b458f424ca75-bf7c71d0"
                         sizes="(max-width: 668px) 100vw, 668px"
                         alt=""
-                        src="./assets/studio6.webp"
+                        src="../assets/studio6.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -625,7 +606,7 @@
                         id="w-node-bed469f1-bc79-b8c0-aef6-b458f424ca77-bf7c71d0"
                         sizes="(max-width: 670px) 100vw, 670px"
                         alt=""
-                        src="./assets/office4.webp"
+                        src="../assets/office4.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -638,7 +619,7 @@
                         id="w-node-bed469f1-bc79-b8c0-aef6-b458f424ca79-bf7c71d0"
                         sizes="(max-width: 667px) 100vw, 667px"
                         alt=""
-                        src="./assets/studio1.webp"
+                        src="../assets/studio1.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -651,7 +632,7 @@
                         id="w-node-bed469f1-bc79-b8c0-aef6-b458f424ca7b-bf7c71d0"
                         sizes="(max-width: 669px) 100vw, 669px"
                         alt=""
-                        src="./assets/men6.webp"
+                        src="../assets/men6.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -681,7 +662,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f8a-bf7c71d0"
                         sizes="(max-width: 668px) 100vw, 668px"
                         alt=""
-                        src="./assets/night2.webp"
+                        src="../assets/night2.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -694,7 +675,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f8c-bf7c71d0"
                         sizes="(max-width: 669px) 100vw, 669px"
                         alt=""
-                        src="./assets/office1.webp"
+                        src="../assets/office1.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -707,7 +688,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f8e-bf7c71d0"
                         sizes="(max-width: 667px) 100vw, 667px"
                         alt=""
-                        src="./assets/night1.webp"
+                        src="../assets/night1.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -720,7 +701,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f91-bf7c71d0"
                         sizes="(max-width: 667px) 100vw, 667px"
                         alt=""
-                        src="./assets/men3.webp"
+                        src="../assets/men3.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -733,7 +714,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f93-bf7c71d0"
                         sizes="(max-width: 665px) 100vw, 665px"
                         alt=""
-                        src="./assets/studio2.webp"
+                        src="../assets/studio2.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -746,7 +727,7 @@
                         id="w-node-_26de5010-ed25-604e-8ed6-b7bf98430f95-bf7c71d0"
                         sizes="(max-width: 668px) 100vw, 668px"
                         alt=""
-                        src="./assets/men5.webp"
+                        src="../assets/men5.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -761,7 +742,7 @@
                         id="w-node-_2bc8b5b9-3b94-95f8-d348-9cb8a36846d2-bf7c71d0"
                         sizes="(max-width: 668px) 100vw, 668px"
                         alt=""
-                        src="./assets/night2.webp"
+                        src="../assets/night2.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -774,7 +755,7 @@
                         id="w-node-_2bc8b5b9-3b94-95f8-d348-9cb8a36846d4-bf7c71d0"
                         sizes="(max-width: 669px) 100vw, 669px"
                         alt=""
-                        src="./assets/office1.webp"
+                        src="../assets/office1.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -787,7 +768,7 @@
                         id="w-node-_2bc8b5b9-3b94-95f8-d348-9cb8a36846d6-bf7c71d0"
                         sizes="(max-width: 667px) 100vw, 667px"
                         alt=""
-                        src="./assets/night1.webp"
+                        src="../assets/night1.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -800,7 +781,7 @@
                         id="w-node-_2bc8b5b9-3b94-95f8-d348-9cb8a36846d8-bf7c71d0"
                         sizes="(max-width: 667px) 100vw, 667px"
                         alt=""
-                        src="./assets/men3.webp"
+                        src="../assets/men3.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -813,7 +794,7 @@
                         id="w-node-_2bc8b5b9-3b94-95f8-d348-9cb8a36846da-bf7c71d0"
                         sizes="(max-width: 665px) 100vw, 665px"
                         alt=""
-                        src="./assets/studio2.webp"
+                        src="../assets/studio2.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -826,7 +807,7 @@
                         id="w-node-_2bc8b5b9-3b94-95f8-d348-9cb8a36846dc-bf7c71d0"
                         sizes="(max-width: 668px) 100vw, 668px"
                         alt=""
-                        src="./assets/men5.webp"
+                        src="../assets/men5.webp"
                         loading="eager"
                         class="header76_image"
                       />
@@ -847,12 +828,12 @@
                       <div class="max-width-large align-center">
                         <div class="margin-bottom margin-small">
                           <h2 id="example" class="heading-style-h2">
-                            Как выглядят готовые фотосессии
+                            What the Final Photos Look Like
                           </h2>
                         </div>
                         <p class="text-size-medium">
-                          Все портреты создаются на основе реальных фотографий и
-                          собираются как единая фотосессия.
+                          All portraits are created from real photos and
+                          designed as one cohesive photoshoot.
                         </p>
                       </div>
                     </div>
@@ -869,7 +850,7 @@
                           <img
                             sizes="(max-width: 665px) 100vw, 665px"
                             alt=""
-                            src="./assets/studio2.webp"
+                            src="../assets/studio2.webp"
                             loading="eager"
                             class="gallery5_image-aspect-ratio-auto"
                           />
@@ -890,7 +871,7 @@
                           <img
                             sizes="(max-width: 1792px) 100vw, 1792px"
                             alt=""
-                            src="./assets/studio8.webp"
+                            src="../assets/studio8.webp"
                             loading="eager"
                             class="gallery5_image-aspect-ratio-auto"
                           />
@@ -911,7 +892,7 @@
                           <img
                             sizes="(max-width: 1792px) 100vw, 1792px"
                             alt=""
-                            src="./assets/men2.webp"
+                            src="../assets/men2.webp"
                             loading="eager"
                             class="gallery5_image-aspect-ratio-auto"
                           />
@@ -935,7 +916,7 @@
                           <img
                             sizes="(max-width: 1792px) 100vw, 1792px"
                             alt=""
-                            src="./assets/studio5.webp"
+                            src="../assets/studio5.webp"
                             loading="eager"
                             class="gallery5_image-aspect-ratio-auto"
                           />
@@ -956,7 +937,7 @@
                           <img
                             sizes="(max-width: 1792px) 100vw, 1792px"
                             alt=""
-                            src="./assets/men1.webp"
+                            src="../assets/men1.webp"
                             loading="eager"
                             class="gallery5_image-aspect-ratio-auto"
                           />
@@ -977,7 +958,7 @@
                           <img
                             sizes="(max-width: 1792px) 100vw, 1792px"
                             alt=""
-                            src="./assets/men3.webp"
+                            src="../assets/men3.webp"
                             loading="eager"
                             class="gallery5_image-aspect-ratio-auto"
                           />
@@ -1017,7 +998,7 @@
                 </div>
                 <div class="banner7_text-wrapper">
                   <div class="text-weight-semibold">
-                    Все примеры на сайте созданы с помощью нашего сервиса.
+                    All examples on this website were created using our service.
                   </div>
                 </div>
                 <div class="button-group">
@@ -1025,7 +1006,7 @@
                     href="https://t.me/myportrait_ai_bot"
                     target="_blank"
                     class="button is-small w-button"
-                    >Начать фотосессию в Telegram</a
+                    >Start Your Photoshoot in Telegram</a
                   >
                 </div>
               </div>
@@ -1045,11 +1026,12 @@
                         </div>
                         <div class="margin-bottom margin-small">
                           <h2 id="types" class="heading-style-h2">
-                            Бизнес-портреты
+                            Business Portraits
                           </h2>
                         </div>
                         <p class="text-size-medium">
-                          Деловые портреты для профиля, LinkedIn и соцсетей
+                          Professional portraits for your profile, LinkedIn, and
+                          social media
                         </p>
                       </div>
                     </div>
@@ -1067,7 +1049,7 @@
                           <img
                             sizes="(max-width: 1792px) 100vw, 1792px"
                             alt=""
-                            src="./assets/office3.webp"
+                            src="../assets/office3.webp"
                             loading="eager"
                             class="layout375_card-small-image-aspect-ratio-auto"
                           />
@@ -1078,14 +1060,16 @@
                               <div class="tag is-text">1</div>
                             </div>
                             <div class="margin-bottom margin-xxsmall">
-                              <h3 class="heading-style-h5">Выбор локации</h3>
+                              <h3 class="heading-style-h5">
+                                Choose the Location
+                              </h3>
                             </div>
                             <p class="style-20">
-                              Вы можете выбрать локацию фотосессии под свою
-                              задачу: студийный фон (светло-серый, бежевый,
-                              белый, темно-коричневый), солнечный кадры в
-                              интерьерной студии, стильный офис с растениями или
-                              темный офис с панарамой на город.
+                              You can choose the photoshoot setting that fits
+                              your goal: a studio backdrop (light gray, beige,
+                              white, or dark brown), sunlit shots in an interior
+                              studio, a stylish office with plants, or a darker
+                              office with a city-view panorama.
                             </p>
                           </div>
                         </div>
@@ -1098,7 +1082,7 @@
                           <img
                             sizes="(max-width: 666px) 100vw, 666px"
                             alt=""
-                            src="./assets/studio5.webp"
+                            src="../assets/studio5.webp"
                             loading="eager"
                             class="layout375_card-small-image-aspect-ratio-auto"
                           />
@@ -1109,14 +1093,13 @@
                               <div class="tag is-text">2</div>
                             </div>
                             <div class="margin-bottom margin-xxsmall">
-                              <h3 class="heading-style-h5">Выбор образа</h3>
+                              <h3 class="heading-style-h5">Choose the Look</h3>
                             </div>
                             <p class="style-20">
-                              Можно выбрать деловой образ с пиджаком и
-                              рубашкой<br />или более лёгкий стиль
-                              smart-casual.<br /><br />Образы подбираются
-                              стилистом так, чтобы подчеркнуть ваш типаж и не
-                              дублируются.
+                              You can choose a business look with a blazer<br />and
+                              shirt or a more relaxed smart-casual style.<br /><br />Looks
+                              are selected by a stylist to highlight your
+                              features and avoid repetitive results.
                             </p>
                           </div>
                         </div>
@@ -1129,7 +1112,7 @@
                           <img
                             sizes="(max-width: 668px) 100vw, 668px"
                             alt=""
-                            src="./assets/studio6.webp"
+                            src="../assets/studio6.webp"
                             loading="eager"
                             class="layout375_card-small-image-aspect-ratio-auto"
                           />
@@ -1141,14 +1124,14 @@
                             </div>
                             <div class="margin-bottom margin-xxsmall">
                               <h3 class="heading-style-h5">
-                                Разные ракурсы <br />и позы
+                                Different Angles <br />and Poses
                               </h3>
                             </div>
                             <p class="style-20">
-                              Каждая фотосессия включает несколько ракурсов:<br />портреты
-                              для аватарки, кадры по пояс и более живые позы для
-                              соцсетей.<br /><br />Это помогает выбрать
-                              идеальное фото для профиля.
+                              Each photoshoot includes several angles:<br />close-up
+                              portraits for your profile picture, waist-up
+                              shots, and more dynamic poses for social media.<br /><br />This
+                              helps you choose the perfect profile photo.
                             </p>
                           </div>
                         </div>
@@ -1161,7 +1144,7 @@
                           <img
                             sizes="(max-width: 669px) 100vw, 669px"
                             alt=""
-                            src="./assets/office1.webp"
+                            src="../assets/office1.webp"
                             loading="eager"
                             class="layout375_card-small-image-aspect-ratio-auto"
                           />
@@ -1172,13 +1155,15 @@
                               <div class="tag is-text">4</div>
                             </div>
                             <div class="margin-bottom margin-xxsmall">
-                              <h3 class="heading-style-h5">Единый фотосет</h3>
+                              <h3 class="heading-style-h5">
+                                A Cohesive Photoset
+                              </h3>
                             </div>
                             <p class="style-20">
-                              Фотографии создаются как единая съёмка:<br />со
-                              схожим светом, стилем и атмосферой.<br /><br />Поэтому
-                              портреты выглядят как серия из настоящей
-                              фотосессии.
+                              The images are created as one cohesive shoot,<br />with
+                              consistent lighting, styling, and atmosphere.<br /><br />That
+                              is why the portraits look like a real photoshoot
+                              series.
                             </p>
                           </div>
                         </div>
@@ -1194,7 +1179,7 @@
                           <img
                             sizes="(max-width: 671px) 100vw, 671px"
                             alt=""
-                            src="./assets/studio4.webp"
+                            src="../assets/studio4.webp"
                             loading="eager"
                             class="layout375_card-large-image-aspect-ratio-auto"
                           />
@@ -1203,16 +1188,15 @@
                           <div class="layout375_card-large-content-top">
                             <div class="margin-bottom margin-small">
                               <h3 class="heading-style-h3">
-                                Портреты, которые можно сразу использовать
+                                Portraits You Can Use Right Away
                               </h3>
                             </div>
                             <p>
-                              Фотографии создаются так, чтобы их можно было
-                              сразу поставить в профиль LinkedIn, Telegram или
-                              другие соцсети.<br /><br />Свет, композиция и
-                              ракурсы подбираются как на настоящей фотосессии —
-                              поэтому портреты выглядят естественно и
-                              профессионально.
+                              The photos are created so you can immediately use
+                              them for LinkedIn, Telegram, or other social media
+                              profiles.<br /><br />Lighting, composition, and
+                              angles are selected like in a real photoshoot, so
+                              the portraits look natural and professional.
                             </p>
                           </div>
                           <div class="margin-top margin-medium">
@@ -1221,7 +1205,7 @@
                                 href="https://t.me/myportrait_ai_bot"
                                 target="_blank"
                                 class="button w-button"
-                                >Начать фотосессию</a
+                                >Start Your Photoshoot</a
                               >
                             </div>
                           </div>
@@ -1256,7 +1240,8 @@
                   </div>
                   <div class="banner7_text-wrapper">
                     <div class="text-weight-semibold">
-                      Все примеры на сайте созданы с помощью нашего сервиса.
+                      All examples on this website were created using our
+                      service.
                     </div>
                   </div>
                   <div class="button-group">
@@ -1264,7 +1249,7 @@
                       href="https://t.me/myportrait_ai_bot"
                       target="_blank"
                       class="button is-small w-button"
-                      >Начать фотосессию в Telegram</a
+                      >Start Your Photoshoot in Telegram</a
                     >
                   </div>
                 </div>
@@ -1278,7 +1263,7 @@
                       <img
                         sizes="(max-width: 667px) 100vw, 667px"
                         alt=""
-                        src="./assets/fire1.webp"
+                        src="../assets/fire1.webp"
                         loading="eager"
                         class="layout210_image-aspect-ratio-portrait"
                       />
@@ -1292,32 +1277,32 @@
                       </div>
                       <div class="margin-bottom margin-small">
                         <h2 class="heading-style-h2">
-                          Художественная фотосессия со свечами
+                          Artistic Candlelit Photoshoot
                         </h2>
                       </div>
                       <div class="margin-bottom margin-small">
                         <p class="text-size-medium">
-                          Атмосферная фотосессия в тёплом свете свечей с
-                          пианино, вдохновлённая эстетикой барокко.<br /><br />Мягкий
-                          свет, глубокие тени и элегантные позы создают
-                          кинематографичное настроение и ощущение настоящей
-                          художественной съёмки.<br /><br />Каждый кадр
-                          собирается как сцена: подбирается образ, поза и свет,
-                          чтобы портреты выглядели живыми и гармоничными.
+                          An atmospheric photoshoot in warm candlelight with a
+                          piano, inspired by Baroque aesthetics.<br /><br />Soft
+                          light, deep shadows, and elegant poses create a
+                          cinematic mood and the feel of a true artistic
+                          shoot.<br /><br />Each image is crafted like a scene,
+                          with styling, pose, and lighting carefully selected so
+                          the portraits feel vivid and harmonious.
                         </p>
                       </div>
                       <ul role="list" class="layout210_list">
                         <li class="layout210_item">
-                          <p>тёплый свет свечей и барочная атмосфера</p>
+                          <p>warm candlelight and a Baroque atmosphere</p>
                         </li>
                         <li class="layout210_item">
-                          <p>индивидуальный подбор образа</p>
+                          <p>individually selected styling</p>
                         </li>
                         <li class="layout210_item">
-                          <p>портретные и художественные кадры</p>
+                          <p>portrait and artistic shots</p>
                         </li>
                         <li class="layout210_item">
-                          <p>единый стиль всей фотосессии</p>
+                          <p>one consistent style throughout the photoshoot</p>
                         </li>
                       </ul>
                       <div class="margin-top margin-medium">
@@ -1326,7 +1311,7 @@
                             href="https://t.me/myportrait_ai_bot"
                             target="_blank"
                             class="button w-button"
-                            >Начать фотосессию</a
+                            >Start Your Photoshoot</a
                           >
                         </div>
                       </div>
@@ -1358,7 +1343,7 @@
                 </div>
                 <div class="banner7_text-wrapper">
                   <div class="text-weight-semibold">
-                    Все примеры на сайте созданы с помощью нашего сервиса.
+                    All examples on this website were created using our service.
                   </div>
                 </div>
                 <div class="button-group">
@@ -1366,7 +1351,7 @@
                     href="https://t.me/myportrait_ai_bot"
                     target="_blank"
                     class="button is-small w-button"
-                    >Начать фотосессию в Telegram</a
+                    >Start Your Photoshoot in Telegram</a
                   >
                 </div>
               </div>
@@ -1386,18 +1371,18 @@
                             id="photo-shoot-steps"
                             class="text-style-tagline"
                           >
-                            Как проходит фотосессия
+                            How It Works
                           </div>
                         </div>
                         <div class="margin-bottom margin-small">
                           <h1 class="heading-style-h1">
-                            Фотосессия в Telegram за несколько шагов
+                            A Photoshoot in Telegram in Just a Few Steps
                           </h1>
                         </div>
                         <p class="text-size-medium">
-                          Без переписок и долгих согласований.<br />Вы просто
-                          заходите в Telegram-бот и собираете свою фотосессию
-                          шаг за шагом.
+                          No back-and-forth messages or long coordination.<br />You
+                          simply open the Telegram bot and build your photoshoot
+                          step by step.
                         </p>
                       </div>
                     </div>
@@ -1410,7 +1395,7 @@
                           <a href="#" class="blog14_item-link w-inline-block"
                             ><div class="blog14_image-wrapper">
                               <img
-                                src="./assets/steps4.webp"
+                                src="../assets/steps4.webp"
                                 loading="lazy"
                                 alt=""
                                 class="blog14_image-aspect-ratio-classic-tv-position-top-center"
@@ -1420,21 +1405,21 @@
                               <div class="blog14_item-content-top">
                                 <div class="margin-bottom margin-xsmall">
                                   <div class="blog14_meta-wrapper">
-                                    <div class="tag"><div>Шаг 1</div></div>
+                                    <div class="tag"><div>Step 1</div></div>
                                   </div>
                                 </div>
                                 <div class="margin-bottom margin-xxsmall">
                                   <h3 class="heading-style-h5">
-                                    Выберите стиль фотосессии и пакет
+                                    Choose the Photoshoot Style and Package
                                   </h3>
                                 </div>
                                 <div class="text-size-regular">
-                                  В боте вы выбираете формат съёмки и пакет: 1,
-                                  3, 6 или 12 кадров.<br /><br />Чем больше
-                                  пакет — тем больше образов, ракурсов и
-                                  вариантов портретов.<br /><br />Также можно
-                                  посмотреть примеры, чтобы понять, какой стиль
-                                  вам ближе.
+                                  Inside the bot, you choose the shoot format
+                                  and package: 1, 3, 6, or 12 images.<br /><br />The
+                                  larger the package, the more looks, angles,
+                                  and portrait options you get.<br /><br />You
+                                  can also browse examples to see which style
+                                  suits you best.
                                 </div>
                               </div>
                             </div></a
@@ -1444,7 +1429,7 @@
                           <a href="#" class="blog14_item-link w-inline-block"
                             ><div class="blog14_image-wrapper">
                               <img
-                                src="./assets/steps3.webp"
+                                src="../assets/steps3.webp"
                                 loading="lazy"
                                 sizes="(max-width: 796px) 100vw, 796px"
                                 srcset="
@@ -1459,20 +1444,21 @@
                               <div class="blog14_item-content-top">
                                 <div class="margin-bottom margin-xsmall">
                                   <div class="blog14_meta-wrapper">
-                                    <div class="tag"><div>Шаг 2</div></div>
+                                    <div class="tag"><div>Step 2</div></div>
                                   </div>
                                 </div>
                                 <div class="margin-bottom margin-xxsmall">
                                   <h3 class="heading-style-h5">
-                                    Настройте детали фотосессии
+                                    Customize the Photoshoot Details
                                   </h3>
                                 </div>
                                 <div class="text-size-regular">
-                                  Для бизнес портретов, вы выбираете, как будет
-                                  выглядеть ваша фотосессия:<br /><br />•
-                                  локацию или цвет студийного фона<br />•
-                                  деловой образ и стиль smart-casual<br />•
-                                  сохранить свою причёску или слегка изменить её
+                                  For business portraits, you choose how your
+                                  photoshoot will look:<br /><br />• the
+                                  location or studio background color<br />• a
+                                  business look or a smart-casual style<br />•
+                                  whether to keep your hairstyle or slightly
+                                  adjust it
                                 </div>
                               </div>
                             </div></a
@@ -1482,7 +1468,7 @@
                           <a href="#" class="blog14_item-link w-inline-block"
                             ><div class="blog14_image-wrapper">
                               <img
-                                src="./assets/steps2.webp"
+                                src="../assets/steps2.webp"
                                 loading="lazy"
                                 sizes="100vw"
                                 srcset="
@@ -1498,20 +1484,21 @@
                               <div class="blog14_item-content-top">
                                 <div class="margin-bottom margin-xsmall">
                                   <div class="blog14_meta-wrapper">
-                                    <div class="tag"><div>Шаг 3</div></div>
+                                    <div class="tag"><div>Step 3</div></div>
                                   </div>
                                 </div>
                                 <div class="margin-bottom margin-xxsmall">
                                   <h3 class="heading-style-h5">
-                                    Загрузите свои фотографии
+                                    Upload Your Photos
                                   </h3>
                                 </div>
                                 <div class="text-size-regular">
-                                  Бот подскажет, какие фотографии лучше
-                                  загрузить:<br /><br />• 3–5 фото<br />• без
-                                  фильтров и очков<br />• с разными ракурсами<br /><br />Это
-                                  помогает сохранить сходство и получить
-                                  естественные портреты.
+                                  The bot will tell you which photos work
+                                  best:<br /><br />• 3–5 photos<br />• without
+                                  filters or glasses<br />• with different
+                                  angles<br /><br />This helps preserve your
+                                  likeness and produce natural-looking
+                                  portraits.
                                 </div>
                               </div>
                             </div></a
@@ -1521,7 +1508,7 @@
                           <a href="#" class="blog14_item-link w-inline-block"
                             ><div class="blog14_image-wrapper">
                               <img
-                                src="./assets/steps1.webp"
+                                src="../assets/steps1.webp"
                                 loading="lazy"
                                 sizes="100vw"
                                 srcset="
@@ -1532,7 +1519,7 @@
                                 alt=""
                                 class="blog14_image-aspect-ratio-classic-tv-position-top-center"
                               /><img
-                                src="./assets/230d4272-ce0e-4cf2-986a-d4ced0c6fd1d"
+                                src="../assets/230d4272-ce0e-4cf2-986a-d4ced0c6fd1d"
                                 loading="lazy"
                                 alt=""
                               />
@@ -1541,23 +1528,24 @@
                               <div class="blog14_item-content-top">
                                 <div class="margin-bottom margin-xsmall">
                                   <div class="blog14_meta-wrapper">
-                                    <div class="tag"><div>Шаг 4</div></div>
+                                    <div class="tag"><div>Step 4</div></div>
                                   </div>
                                 </div>
                                 <div class="margin-bottom margin-xxsmall">
                                   <h3 class="heading-style-h5">
-                                    Получите готовую фотосессию
+                                    Receive Your Finished Photoshoot
                                   </h3>
                                 </div>
                                 <div class="text-size-regular">
-                                  После оплаты начинается создание фотосета.<br /><br />Фотографом
-                                  и стилистом подбираются:<br />• стиль, свет,
-                                  ракурсы, образ<br /><br />Каждый кадр
-                                  дополнительно дорабатывается вручную.<br /><br />Готовые
-                                  фотографии приходят прямо в Telegram. Если
-                                  результат понравится, фотосессию можно
-                                  продолжить с тем же образом и добавить новые
-                                  кадры.
+                                  Once payment is completed, production of your
+                                  photoset begins.<br /><br />A photographer and
+                                  stylist refine:<br />• styling, lighting,
+                                  angles, and overall look<br /><br />Each image
+                                  is additionally refined by hand.<br /><br />The
+                                  finished photos are delivered directly to
+                                  Telegram.If you like the result, you can
+                                  continue the photoshoot in the same style and
+                                  add more images.
                                 </div>
                               </div>
                             </div></a
@@ -1591,7 +1579,7 @@
                   </div>
                 </div>
                 <div class="banner7_text-wrapper">
-                  <div class="text-weight-semibold">Перейти в Telegram Bot</div>
+                  <div class="text-weight-semibold">Open Telegram Bot</div>
                 </div>
                 <div class="button-group">
                   <a
@@ -1615,17 +1603,17 @@
                       <div class="max-width-large align-center">
                         <div class="margin-bottom margin-xsmall">
                           <div id="tariff" class="text-style-tagline">
-                            Пакеты
+                            Packages
                           </div>
                         </div>
                         <div class="margin-bottom margin-small">
                           <h2 class="heading-style-h2">
-                            Выберите формат фотосессии
+                            Choose Your Photoshoot Package
                           </h2>
                         </div>
                         <p class="text-size-medium">
-                          Чем больше пакет — тем больше образов, ракурсов и
-                          вариантов портретов.
+                          The larger the package, the more looks, angles, and
+                          portrait options you get.
                         </p>
                       </div>
                     </div>
@@ -1640,14 +1628,15 @@
                           <div class="text-align-center">
                             <div class="margin-bottom margin-xxsmall">
                               <div class="heading-style-h6-tariff">
-                                Попробовать стиль
+                                Try the Style
                               </div>
                             </div>
                             <div class="margin-bottom margin-xxsmall">
-                              <div class="heading-style-h1">1 фото</div>
+                              <div class="heading-style-h1">1 Photo</div>
                             </div>
                             <div>
-                              Подходит, чтобы оценить стиль и качество портрета.
+                              Perfect for trying the style and evaluating the
+                              portrait quality.
                             </div>
                           </div>
                         </div>
@@ -1672,7 +1661,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>1 профессиональный портрет</div>
+                            <div>1 professional portrait</div>
                           </div>
                           <div
                             id="w-node-_26de5010-ed25-604e-8ed6-b7bf9843112f-bf7c71d0"
@@ -1695,7 +1684,7 @@
                               </div>
                             </div>
                             <div>
-                              деловой образ и студийный фон по умолчанию
+                              business look and studio background by default
                             </div>
                           </div>
                           <div
@@ -1718,7 +1707,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>базовая цветокоррекция</div>
+                            <div>basic color correction</div>
                           </div>
                           <div class="pricing18_feature">
                             <div class="pricing18_icon-wrapper">
@@ -1737,7 +1726,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>готово в течение 24 часов</div>
+                            <div>ready within 24 hours</div>
                           </div>
                         </div>
                       </div>
@@ -1746,7 +1735,7 @@
                           href="https://t.me/myportrait_ai_bot"
                           target="_blank"
                           class="button w-button"
-                          >Попробовать</a
+                          >Try It</a
                         >
                       </div>
                     </div>
@@ -1756,15 +1745,15 @@
                           <div class="text-align-center">
                             <div class="margin-bottom margin-xxsmall">
                               <div class="heading-style-h6-tariff">
-                                Мини-набор
+                                Mini Package
                               </div>
                             </div>
                             <div class="margin-bottom margin-xxsmall">
-                              <div class="heading-style-h1">3 фото</div>
+                              <div class="heading-style-h1">3 Photos</div>
                             </div>
                             <div>
-                              Небольшая серия портретов для профиля или
-                              аватарки.
+                              A small set of portraits for your profile or
+                              avatar.
                             </div>
                           </div>
                         </div>
@@ -1789,7 +1778,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>3 готовых кадра</div>
+                            <div>3 finished portraits</div>
                           </div>
                           <div
                             id="w-node-a67a8b16-4519-7248-8b0f-94b4d7c17bd7-bf7c71d0"
@@ -1811,7 +1800,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>разные ракурсы</div>
+                            <div>different angles</div>
                           </div>
                           <div
                             id="w-node-a67a8b16-4519-7248-8b0f-94b4d7c17bdc-bf7c71d0"
@@ -1833,7 +1822,9 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>настройка локации и образа фотосессии</div>
+                            <div>
+                              customizable location and photoshoot styling
+                            </div>
                           </div>
                           <div class="pricing18_feature">
                             <div class="pricing18_icon-wrapper">
@@ -1852,7 +1843,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>единый стиль фотосессии</div>
+                            <div>a cohesive photoshoot style</div>
                           </div>
                         </div>
                       </div>
@@ -1861,7 +1852,7 @@
                           href="https://t.me/myportrait_ai_bot"
                           target="_blank"
                           class="button w-button"
-                          >Выбрать пакет</a
+                          >Choose Package</a
                         >
                       </div>
                     </div>
@@ -1871,15 +1862,15 @@
                           <div class="text-align-center">
                             <div class="margin-bottom margin-xxsmall">
                               <div class="heading-style-h6-tariff">
-                                ⭐ Лучший выбор
+                                ⭐ Best Choice
                               </div>
                             </div>
                             <div class="margin-bottom margin-xxsmall">
-                              <div class="heading-style-h1">6 фото</div>
+                              <div class="heading-style-h1">6 Photos</div>
                             </div>
                             <div>
-                              Полноценная серия портретов для профиля и
-                              соцсетей.
+                              A complete portrait set for your profile and
+                              social media.
                             </div>
                           </div>
                         </div>
@@ -1904,7 +1895,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>6 готовых кадров</div>
+                            <div>6 finished portraits</div>
                           </div>
                           <div
                             id="w-node-_26de5010-ed25-604e-8ed6-b7bf9843114e-bf7c71d0"
@@ -1926,7 +1917,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>больше ракурсов и живых эмоций</div>
+                            <div>more angles and more natural expressions</div>
                           </div>
                           <div
                             id="w-node-_26de5010-ed25-604e-8ed6-b7bf98431158-bf7c71d0"
@@ -1948,7 +1939,9 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>настройка локации и образа фотосессии</div>
+                            <div>
+                              customizable location and photoshoot styling
+                            </div>
                           </div>
                           <div
                             id="w-node-_26de5010-ed25-604e-8ed6-b7bf98431153-bf7c71d0"
@@ -1970,7 +1963,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>ручная доработка каждого кадра</div>
+                            <div>manual refinement of every image</div>
                           </div>
                         </div>
                       </div>
@@ -1979,7 +1972,7 @@
                           href="https://t.me/myportrait_ai_bot"
                           target="_blank"
                           class="button w-button"
-                          >Выбрать пакет</a
+                          >Choose Package</a
                         >
                       </div>
                     </div>
@@ -1989,15 +1982,14 @@
                           <div class="text-align-center">
                             <div class="margin-bottom margin-xxsmall">
                               <div class="heading-style-h6-tariff">
-                                💎 Полная фотосессия
+                                💎 Full Photoshoot
                               </div>
                             </div>
                             <div class="margin-bottom margin-xxsmall">
-                              <div class="heading-style-h1">12 фото</div>
+                              <div class="heading-style-h1">12 Photos</div>
                             </div>
                             <div>
-                              Два образа и больше вариативности для разных
-                              задач.
+                              Two looks and more variety for different needs.
                             </div>
                           </div>
                         </div>
@@ -2022,7 +2014,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>12 готовых кадров</div>
+                            <div>12 finished portraits</div>
                           </div>
                           <div
                             id="w-node-_26de5010-ed25-604e-8ed6-b7bf98431172-bf7c71d0"
@@ -2044,7 +2036,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>2 разных образа и фона навыбор</div>
+                            <div>2 different looks and background options</div>
                           </div>
                           <div
                             id="w-node-_26de5010-ed25-604e-8ed6-b7bf98431177-bf7c71d0"
@@ -2066,7 +2058,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>больше ракурсов и живых эмоций</div>
+                            <div>more angles and more natural expressions</div>
                           </div>
                           <div
                             id="w-node-_26de5010-ed25-604e-8ed6-b7bf98431181-bf7c71d0"
@@ -2088,7 +2080,7 @@
                                 </svg>
                               </div>
                             </div>
-                            <div>приоритетная обработка</div>
+                            <div>priority processing</div>
                           </div>
                         </div>
                       </div>
@@ -2097,7 +2089,7 @@
                           href="https://t.me/myportrait_ai_bot"
                           target="_blank"
                           class="button w-button"
-                          >Начать фотосессию</a
+                          >Start Your Photoshoot</a
                         >
                       </div>
                     </div>
@@ -2128,8 +2120,8 @@
                 </div>
                 <div class="banner7_text-wrapper">
                   <div class="text-weight-semibold">
-                    Если результат понравится, вы сможете продолжить фотосессию
-                    и добавить больше кадров в том же образе.
+                    If you like the result, you can continue the photoshoot and
+                    add more images in the same style.
                   </div>
                 </div>
                 <div class="button-group">
@@ -2137,7 +2129,7 @@
                     href="https://t.me/myportrait_ai_bot"
                     target="_blank"
                     class="button is-small w-button"
-                    >Открыть бот в Telegram</a
+                    >Open the Telegram Bot</a
                   >
                 </div>
               </div>
@@ -2153,11 +2145,11 @@
                     <div class="text-align-center">
                       <div class="max-width-large align-center">
                         <div class="margin-bottom margin-small">
-                          <h2 class="heading-style-h2">Отзывы о фотосессии</h2>
+                          <h2 class="heading-style-h2">What Our Clients Say</h2>
                         </div>
                         <p class="text-size-medium">
-                          Пользователи уже используют эти портреты для профиля,
-                          соцсетей и личного бренда.
+                          Users are already using these portraits for their
+                          profiles, social media, and personal brand.
                         </p>
                       </div>
                     </div>
@@ -2245,9 +2237,9 @@
                           </div>
                         </div>
                         <div class="text-size-medium">
-                          "Делала портрет для LinkedIn. Получилось очень
-                          естественно, как будто настоящая фотосессия. Выбрала
-                          сразу несколько фотографий для профиля."
+                          "I ordered portraits for LinkedIn, and they looked
+                          incredibly natural — just like a real photoshoot. I
+                          ended up choosing several images for my profile."
                         </div>
                       </div>
                       <div class="margin-top margin-small">
@@ -2262,7 +2254,7 @@
                                 https://cdn.prod.website-files.com/69b23bfb92235defbf7c718c/69b23cce4aa377502eb935b9_team-5.jpeg        1600w
                               "
                               alt=""
-                              src="./assets/69b23cce4aa377502eb935b9_team-5.jpeg"
+                              src="../assets/69b23cce4aa377502eb935b9_team-5.jpeg"
                               loading="eager"
                               class="testimonial17_customer-image"
                             />
@@ -2358,9 +2350,10 @@
                           </div>
                         </div>
                         <div class="text-size-medium">
-                          "Понравилось, что всё происходит прямо в Telegram.
-                          Загрузил фото, выбрал стиль — и через несколько часов
-                          получил готовые портреты."
+                          "I really liked that everything happens directly in
+                          Telegram. You just upload your photos, choose a style
+                          — and within a few hours you get your finished
+                          portraits."
                         </div>
                       </div>
                       <div class="margin-top margin-small">
@@ -2368,7 +2361,7 @@
                           <div class="testimonial17_client-image-wrapper">
                             <img
                               loading="eager"
-                              src="./assets/69b23cd6b677cf6962fc9db4_relume-828144.png"
+                              src="../assets/69b23cd6b677cf6962fc9db4_relume-828144.png"
                               alt=""
                               class="testimonial17_customer-image"
                             />
@@ -2464,9 +2457,9 @@
                           </div>
                         </div>
                         <div class="text-size-medium">
-                          "Брала пакет на 6 фото. Понравилось, что фотографии
-                          выглядят как серия из одной съёмки, а не просто
-                          случайные картинки."
+                          "I chose the 6-photo package. What I liked most was
+                          that the portraits look like they come from a single
+                          photoshoot rather than a set of random images."
                         </div>
                       </div>
                       <div class="margin-top margin-small">
@@ -2474,7 +2467,7 @@
                           <div class="testimonial17_client-image-wrapper">
                             <img
                               loading="eager"
-                              src="./assets/69b23cd5104ebdc2c01a0b9a_relume-828145.png"
+                              src="../assets/69b23cd5104ebdc2c01a0b9a_relume-828145.png"
                               alt=""
                               class="testimonial17_customer-image"
                             />
@@ -2501,11 +2494,12 @@
                         <div class="max-width-large align-center">
                           <div class="margin-bottom margin-small">
                             <h2 id="questions" class="heading-style-h2">
-                              Вопросы
+                              Questions
                             </h2>
                           </div>
                           <p class="text-size-medium-2">
-                            Всё, что нужно знать перед первой фотосессией.
+                            Everything you need to know before your first
+                            photoshoot.
                           </p>
                         </div>
                       </div>
@@ -2532,7 +2526,7 @@
                                 aria-hidden="true"
                               ></div>
                               <div class="text-block-2">
-                                Будут ли фотографии похожи на меня?
+                                Will the photos look like me?
                               </div>
                             </div>
                             <nav
@@ -2541,11 +2535,12 @@
                               aria-labelledby="w-dropdown-toggle-0"
                             >
                               <div class="text-block">
-                                Да. Портреты создаются на основе ваших
-                                фотографий, чтобы сохранить внешность, мимику и
-                                черты лица.<br /><br />Мы используем ваши снимки
-                                как основу и собираем фотосессию так, чтобы
-                                результат выглядел естественно и узнаваемо.
+                                Yes. The portraits are created based on your
+                                photos to preserve your appearance, facial
+                                expressions, and key features.
+                                <br /><br />We use your images as a foundation
+                                and build the photoshoot so that the final
+                                result looks natural and recognizable.
                               </div>
                             </nav>
                           </div>
@@ -2568,7 +2563,7 @@
                                 aria-hidden="true"
                               ></div>
                               <div class="text-block-2">
-                                Какие фотографии нужно загрузить?
+                                What photos should I upload?
                               </div>
                             </div>
                             <nav
@@ -2577,27 +2572,31 @@
                               aria-labelledby="w-dropdown-toggle-1"
                             >
                               <div class="text-block">
-                                Достаточно 3–5 обычных фотографий, сделанных на
-                                телефон при хорошем освещении.<br /><br />Лучше
-                                всего подходят качественные фотографии, где вы
-                                себе нравитесь и выглядите естественно. Именно
-                                такие снимки помогают точнее передать внешность,
-                                мимику, причёску и общее впечатление от
-                                образа.<br /><br />Чтобы портреты получились
-                                максимально похожими, желательно, чтобы на
-                                фотографиях: • лицо было видно при хорошем
-                                освещении • были разные ракурсы — с улыбкой и
-                                без • была та причёска, которую вы хотите видеть
-                                в результате • была видна длина волос.<br /><br />Например,
-                                если вы хотите портреты с распущенными волосами,
-                                лучше загрузить фотографии именно с такой
-                                причёской. Для девушек особенно хорошо подходят
-                                снимки с распущенными волосами или лёгкой
-                                укладкой — это помогает точнее передать форму,
-                                объём и длину волос.<br /><br />Чем естественнее
-                                и удачнее исходные фотографии, тем более
-                                похожими, живыми и красивыми получатся готовые
-                                портреты.
+                                3–5 regular photos taken on a phone in good
+                                lighting are enough.<br /><br />
+                                The best photos are high-quality pictures where
+                                you like how you look and appear natural. Such
+                                photos help the system more accurately capture
+                                your appearance, facial expressions, hairstyle,
+                                and overall look.<br /><br />
+                                To make the portraits look as close to you as
+                                possible, it is recommended that your photos
+                                include:<br /><br />
+                                • a clearly visible face with good lighting<br />
+                                • different angles — with and without a smile<br />
+                                • the hairstyle you want to see in the final
+                                portraits<br />
+                                • visible hair length.<br /><br />
+                                For example, if you want portraits with your
+                                hair down, it is best to upload photos where
+                                your hair is styled that way.<br /><br />
+                                For women, photos with natural loose hair or
+                                light styling usually work best — this helps
+                                more accurately capture the shape, volume, and
+                                length of the hair.<br /><br />
+                                The more natural and well-chosen your original
+                                photos are, the more realistic, recognizable,
+                                and beautiful your final portraits will be.
                               </div>
                             </nav>
                           </div>
@@ -2620,7 +2619,8 @@
                                 aria-hidden="true"
                               ></div>
                               <div class="text-block-2">
-                                Нужно ли записываться или общаться с фотографом?
+                                Do I need to book a session or communicate with
+                                a photographer?
                               </div>
                             </div>
                             <nav
@@ -2629,10 +2629,12 @@
                               aria-labelledby="w-dropdown-toggle-2"
                             >
                               <div class="text-block">
-                                Нет.<br /><br />Вся фотосессия проходит прямо в
-                                Telegram-боте.<br /><br />Вы просто выбираете
-                                стиль, пакет и загружаете фотографии — бот
-                                проводит вас через все шаги.
+                                No.
+                                <br /><br />The entire photoshoot happens
+                                directly inside the Telegram bot.<br /><br />You
+                                simply choose a style, select a package, and
+                                upload your photos — the bot guides you through
+                                every step.
                               </div>
                             </nav>
                           </div>
@@ -2655,7 +2657,7 @@
                                 aria-hidden="true"
                               ></div>
                               <div class="text-block-2">
-                                Сколько времени занимает создание фотосессии?
+                                How long does it take to create the photoshoot?
                               </div>
                             </div>
                             <nav
@@ -2664,8 +2666,9 @@
                               aria-labelledby="w-dropdown-toggle-3"
                             >
                               <div class="text-block">
-                                Готовность до 24 часов, обычно быстрее, если не
-                                требуется больше времени на ручную доработку.
+                                The photos are ready within 24 hours, often
+                                faster if no additional manual refinement is
+                                required.
                               </div>
                             </nav>
                           </div>
@@ -2688,8 +2691,8 @@
                                 aria-hidden="true"
                               ></div>
                               <div class="text-block-2">
-                                Можно ли продолжить фотосессию, если результат
-                                понравится?
+                                Can I continue the photoshoot if I like the
+                                results?
                               </div>
                             </div>
                             <nav
@@ -2698,11 +2701,12 @@
                               aria-labelledby="w-dropdown-toggle-4"
                             >
                               <div class="text-block">
-                                Да.<br /><br />Если вам понравился стиль и
-                                образ, вы можете добавить больше кадров в той же
-                                фотосессии.<br /><br />Бот сохранит стиль, фон и
-                                атмосферу съёмки, чтобы новая серия выглядела
-                                как продолжение.
+                                Yes.
+                                <br /><br />If you like the style and look, you
+                                can add more photos within the same photoshoot.
+                                <br /><br />The bot will preserve the style,
+                                background, and overall atmosphere so the new
+                                images look like a natural continuation.
                               </div>
                             </nav>
                           </div>
@@ -2725,7 +2729,7 @@
                                 aria-hidden="true"
                               ></div>
                               <div class="text-block-2">
-                                Можно ли выбрать образ и фон?
+                                Can I choose the outfit and background?
                               </div>
                             </div>
                             <nav
@@ -2734,11 +2738,13 @@
                               aria-labelledby="w-dropdown-toggle-5"
                             >
                               <div class="text-block">
-                                Да.<br /><br />В боте вы можете выбрать:<br /><br />•
-                                локацию или цвет студийного фона<br />• деловой
-                                образ или smart-casual<br />• сохранить свою
-                                причёску<br /><br />Это помогает собрать
-                                фотосессию под вашу задачу.
+                                Yes.
+                                <br /><br />Inside the bot you can choose:
+                                <br /><br />• location or studio background
+                                color<br />• business style or smart casual
+                                look<br />• keep your current hairstyle<br /><br />This
+                                helps create a photoshoot tailored to your
+                                needs.
                               </div>
                             </nav>
                           </div>
@@ -2761,7 +2767,7 @@
                                 aria-hidden="true"
                               ></div>
                               <div class="text-block-2">
-                                Для чего подходят такие портреты?
+                                What can these portraits be used for?
                               </div>
                             </div>
                             <nav
@@ -2770,10 +2776,10 @@
                               aria-labelledby="w-dropdown-toggle-6"
                             >
                               <div class="text-block">
-                                Фотографии отлично подходят для:
-                                <br /><br />• профиля LinkedIn<br />• Telegram и
-                                социальных сетей<br />• аватарки<br /><br />личного
-                                бренда
+                                These portraits are perfect for:<br /><br />•
+                                LinkedIn profiles<br />• Telegram and social
+                                media<br />• profile pictures and avatars<br /><br />personal
+                                branding
                               </div>
                             </nav>
                           </div>
@@ -2796,7 +2802,7 @@
                                 aria-hidden="true"
                               ></div>
                               <div class="text-block-2">
-                                Нужно ли профессиональное фото для загрузки?
+                                Do I need professional photos to upload?
                               </div>
                             </div>
                             <nav
@@ -2805,11 +2811,10 @@
                               aria-labelledby="w-dropdown-toggle-7"
                             >
                               <div class="text-block">
-                                Нет, профессиональные фотографии не нужны.<br /><br />
-                                Достаточно 3–5 обычных фотографий, сделанных на
-                                телефон при хорошем освещении.<br /><br />Бот
-                                подскажет, какие фотографии подойдут лучше
-                                всего.
+                                No, professional photos are not required.<br /><br />3–5
+                                regular photos taken on a phone in good lighting
+                                are enough.<br />The bot will guide you and
+                                suggest which photos work best.<br />
                               </div>
                             </nav>
                           </div>
@@ -2831,7 +2836,7 @@
                                 class="icon w-icon-dropdown-toggle"
                                 aria-hidden="true"
                               ></div>
-                              <div class="text-block-2">Это безопасно?</div>
+                              <div class="text-block-2">Is it safe?</div>
                             </div>
                             <nav
                               class="dropdown-list w-dropdown-list"
@@ -2839,10 +2844,11 @@
                               aria-labelledby="w-dropdown-toggle-8"
                             >
                               <div class="text-block">
-                                Да.<br /><br />Ваши фотографии используются
-                                только для создания ваших портретов и не
-                                передаются третьим лицам.<br />Оплата происходит
-                                через официальный платежный сервис в Telegram.
+                                Yes.
+                                <br /><br />Your photos are used only to create
+                                your portraits and are never shared with third
+                                parties. <br />Payments are processed through
+                                the official Telegram payment system.
                               </div>
                             </nav>
                           </div>
@@ -2853,17 +2859,19 @@
                       <div class="text-align-center">
                         <div class="max-width-medium align-center">
                           <div class="margin-bottom margin-xsmall">
-                            <h3 class="heading-style-h4">Остались вопросы?</h3>
+                            <h3 class="heading-style-h4">
+                              Still have questions?
+                            </h3>
                           </div>
                           <p class="text-size-medium-2">
-                            Напишите нам в Telegram — мы ответим и поможем.
+                            Message us on Telegram — we’ll be happy to help.
                           </p>
                           <div class="margin-top margin-medium">
                             <div class="button-group is-center">
                               <a
                                 href="https://t.me/myportrait_ai_bot"
                                 class="button-2 is-secondary w-button"
-                                >Написать</a
+                                >Contact Us</a
                               >
                             </div>
                           </div>
@@ -2896,7 +2904,7 @@
                   </div>
                 </div>
                 <div class="banner7_text-wrapper">
-                  <div class="text-weight-semibold">Перейти в Telegram Bot</div>
+                  <div class="text-weight-semibold">Open the Telegram Bot</div>
                 </div>
                 <div class="button-group">
                   <a
@@ -2918,14 +2926,13 @@
                   <div class="w-layout-grid cta1_content">
                     <div class="cta1_content-left">
                       <div class="margin-bottom margin-small">
-                        <h2 class="heading-style-h2">
-                          Попробуйте свою AI-фотосессию
-                        </h2>
+                        <h2 class="heading-style-h2">Try Your AI Photoshoot</h2>
                       </div>
                       <p class="text-size-medium">
-                        Загрузите фотографии в Telegram-бот<br />и получите
-                        профессиональные портреты уже сегодня.<br /><br />Без
-                        регистрации. Всё происходит прямо в Telegram.
+                        Upload your photos to the Telegram bot
+                        <br />and receive professional portraits today.
+                        <br /><br />No registration required. Everything happens
+                        directly in Telegram.
                       </p>
                       <div class="margin-top margin-medium">
                         <div class="button-group">
@@ -2933,7 +2940,7 @@
                             href="https://t.me/myportrait_ai_bot"
                             target="_blank"
                             class="button w-button"
-                            >Начать фотосессию в Telegram</a
+                            >Start Your Photoshoot in Telegram</a
                           >
                         </div>
                       </div>
@@ -2942,7 +2949,7 @@
                       <img
                         sizes="(max-width: 2284px) 100vw, 2284px"
                         alt=""
-                        src="./assets/office2.webp"
+                        src="../assets/office2.webp"
                         loading="eager"
                         class="cta1_image"
                       />
@@ -2968,20 +2975,18 @@
                       sizes="66px"
                       height="44px"
                       alt=""
-                      src="./assets/logo.webp"
+                      src="../assets/logo.webp"
                       loading="eager"
                       class="footer7_logo"
                   /></a>
                   <div class="w-layout-grid footer7_link-list">
-                    <a href="#example" class="footer7_link">Примеры</a
+                    <a href="#example" class="footer7_link">Examples</a
                     ><a href="#types" class="footer7_link"
-                      >Подробнее о фотосессиях</a
+                      >About the Photoshoots</a
                     ><a href="#photo-shoot-steps" class="footer7_link"
-                      >Как проходит фотосессия</a
-                    ><a href="#tariff" class="footer7_link">Тарифы</a
-                    ><a href="#questions" class="footer7_link"
-                      >Часто задаваемые вопросы</a
-                    >
+                      >How the Photoshoot Works</a
+                    ><a href="#tariff" class="footer7_link">Pricing</a
+                    ><a href="#questions" class="footer7_link">FAQ</a>
                   </div>
                 </div>
               </div>
@@ -2989,16 +2994,12 @@
               <div class="padding-top padding-medium">
                 <div class="footer7_bottom-wrapper">
                   <div class="footer7_credit-text">
-                    © 2025 My Portrait AI. Все права защищены
+                    © 2025 My Portrait AI. All rights reserved
                   </div>
                   <div class="w-layout-grid footer7_legal-list">
-                    <a href="#" class="footer7_legal-link"
-                      >Политика конфиденциальности</a
-                    ><a href="#" class="footer7_legal-link"
-                      >Условия использования</a
-                    ><a href="#" class="footer7_legal-link"
-                      >Настройки cookies</a
-                    >
+                    <a href="#" class="footer7_legal-link">Privacy Policy</a
+                    ><a href="#" class="footer7_legal-link">Terms of Service</a
+                    ><a href="#" class="footer7_legal-link">Cookie Settings</a>
                   </div>
                 </div>
               </div>
@@ -3008,39 +3009,39 @@
       </footer>
     </div>
     <script
-      src="./assets/jquery-3.5.1.min.dc5e7f18c8.js"
+      src="../assets/jquery-3.5.1.min.dc5e7f18c8.js"
       type="text/javascript"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
     <script
-      src="./assets/webflow.schunk.778b1a6248836936.js"
+      src="../assets/webflow.schunk.778b1a6248836936.js"
       type="text/javascript"
       integrity="sha384-+tpIM6Veqdc5QhEt1HgpRk0Ox45AkmhEwvbvYnyNFoTAOfvpT8N24Odpd0mAqnW0"
       crossorigin="anonymous"
     ></script>
     <script
-      src="./assets/webflow.schunk.572944b7474b15a5.js"
+      src="../assets/webflow.schunk.572944b7474b15a5.js"
       type="text/javascript"
       integrity="sha384-/7xuEfUdgNxIwoRFxsRd1Gg9VtlFpORPoZ0SMjlazMjt/4J0BKGPrSMsy7227g0T"
       crossorigin="anonymous"
     ></script>
     <script
-      src="./assets/webflow.8aa1215e.d4c342b61da19bdb.js"
+      src="../assets/webflow.8aa1215e.d4c342b61da19bdb.js"
       type="text/javascript"
       integrity="sha384-WMeLsYzyMI77XZWJk+SqGNtDld0RAK1kvYEPWR2b6E2pmYiW5zEBcaWVYl8O7zvK"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/gsap.min.js" type="text/javascript"></script>
+    <script src="../assets/gsap.min.js" type="text/javascript"></script>
     <a class="w-webflow-badge" href="https://webflow.com/?utm_campaign=brandjs"
       ><img
-        src="./assets/webflow-badge-icon-d2.89e12c322e.svg"
+        src="../assets/webflow-badge-icon-d2.89e12c322e.svg"
         alt=""
         style="margin-right: 4px; width: 26px" /><img
-        src="./assets/webflow-badge-text-d2.c82cec3b78.svg"
+        src="../assets/webflow-badge-text-d2.c82cec3b78.svg"
         alt="Made in Webflow"
     /></a>
-    <script src="./assets/gsap.min.js" type="text/javascript"></script>
+    <script src="../assets/gsap.min.js" type="text/javascript"></script>
     <style>
       .w-webflow-badge {
         display: none !important;
