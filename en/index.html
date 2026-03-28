@@ -364,6 +364,95 @@
               background-color: var(--color-scheme-1--text) !important;
               opacity: 1 !important;
             }
+
+            .lang-switch {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              min-width: 3rem;
+              padding: 0.45rem 0.7rem;
+              border: 1px solid currentColor;
+              border-radius: 999px;
+              font-size: 0.8rem;
+              font-weight: 600;
+              line-height: 1;
+              text-decoration: none;
+              transition:
+                opacity 0.2s ease,
+                background-color 0.2s ease;
+            }
+
+            .lang-switch:hover {
+              opacity: 0.75;
+            }
+
+            .promo-banner {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 1.25rem;
+              max-width: 58rem;
+              padding: 1.25rem 1.5rem;
+              border: 1px solid rgba(42, 24, 16, 0.12);
+              border-radius: 1.5rem;
+              background: linear-gradient(135deg, #fff2e7 0%, #ffe0cc 100%);
+              box-shadow: 0 18px 40px rgba(94, 43, 18, 0.12);
+            }
+
+            .promo-banner_copy {
+              display: flex;
+              flex-direction: column;
+              gap: 0.55rem;
+              flex: 1;
+              max-width: 44rem;
+            }
+
+            .promo-banner_heading {
+              display: flex;
+              align-items: center;
+              gap: 0.75rem;
+              flex-wrap: wrap;
+            }
+
+            .promo-banner_badge {
+              display: inline-flex;
+              align-items: center;
+              gap: 0.45rem;
+              width: fit-content;
+              padding: 0.35rem 0.8rem;
+              border-radius: 999px;
+              background-color: rgba(255, 255, 255, 0.7);
+              color: #9a3d00;
+              font-size: 0.8rem;
+              font-weight: 700;
+              letter-spacing: 0.04em;
+              text-transform: uppercase;
+            }
+
+            .promo-banner_title {
+              font-size: 1.35rem;
+              font-weight: 700;
+              line-height: 1.2;
+              margin: 0;
+            }
+
+            .promo-banner_text {
+              font-size: 1rem;
+              line-height: 1.5;
+            }
+
+            @media screen and (max-width: 767px) {
+              .promo-banner {
+                align-items: flex-start;
+                flex-direction: column;
+              }
+
+              .promo-banner_heading {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 0.55rem;
+              }
+            }
           </style>
         </div>
       </div>
@@ -406,7 +495,13 @@
             class="navbar13_button-wrapper"
           >
             <a
-              href="https://t.me/myportrait_ai_bot"
+              href="../index.html"
+              class="lang-switch"
+              onclick="localStorage.setItem('site-lang', 'ru')"
+              >RU</a
+            >
+            <a
+              href="https://t.me/photobai_bot"
               target="_blank"
               class="button is-small w-button"
               >Open the Telegram Bot</a
@@ -460,7 +555,7 @@
               <div class="margin-top margin-medium">
                 <div class="button-group">
                   <a
-                    href="https://t.me/myportrait_ai_bot"
+                    href="https://t.me/photobai_bot"
                     target="_blank"
                     class="button w-button"
                     >Start Your Photoshoot in Telegram</a
@@ -818,6 +913,34 @@
             </div>
           </div>
         </header>
+        <section class="banner7_component">
+          <div class="padding-global">
+            <div class="banner7_content-wrapper">
+              <div class="promo-banner">
+                <div class="promo-banner_copy">
+                  <div class="promo-banner_heading">
+                    <div class="promo-banner_badge">🔥 Coming Soon</div>
+                    <div class="promo-banner_title">
+                      Catalog photoshoots for brands
+                    </div>
+                  </div>
+                  <div class="promo-banner_text">
+                    We are preparing a new format for brands: catalog shoots for
+                    lookbooks, product cards, and campaign materials.
+                  </div>
+                </div>
+                <div class="button-group">
+                  <a
+                    href="https://t.me/photobai_bot"
+                    target="_blank"
+                    class="button is-small w-button"
+                    >Get launch updates</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="section_gallery5">
           <div class="padding-global">
             <div class="container-large">
@@ -1003,7 +1126,7 @@
                 </div>
                 <div class="button-group">
                   <a
-                    href="https://t.me/myportrait_ai_bot"
+                    href="https://t.me/photobai_bot"
                     target="_blank"
                     class="button is-small w-button"
                     >Start Your Photoshoot in Telegram</a
@@ -1202,7 +1325,7 @@
                           <div class="margin-top margin-medium">
                             <div class="button-group">
                               <a
-                                href="https://t.me/myportrait_ai_bot"
+                                href="https://t.me/photobai_bot"
                                 target="_blank"
                                 class="button w-button"
                                 >Start Your Photoshoot</a
@@ -1246,7 +1369,7 @@
                   </div>
                   <div class="button-group">
                     <a
-                      href="https://t.me/myportrait_ai_bot"
+                      href="https://t.me/photobai_bot"
                       target="_blank"
                       class="button is-small w-button"
                       >Start Your Photoshoot in Telegram</a
@@ -1308,7 +1431,7 @@
                       <div class="margin-top margin-medium">
                         <div class="button-group">
                           <a
-                            href="https://t.me/myportrait_ai_bot"
+                            href="https://t.me/photobai_bot"
                             target="_blank"
                             class="button w-button"
                             >Start Your Photoshoot</a
@@ -1348,7 +1471,7 @@
                 </div>
                 <div class="button-group">
                   <a
-                    href="https://t.me/myportrait_ai_bot"
+                    href="https://t.me/photobai_bot"
                     target="_blank"
                     class="button is-small w-button"
                     >Start Your Photoshoot in Telegram</a
@@ -1572,7 +1695,7 @@
                 </div>
                 <div class="button-group">
                   <a
-                    href="https://t.me/myportrait_ai_bot"
+                    href="https://t.me/photobai_bot"
                     target="_blank"
                     class="button is-small w-button"
                     >Telegram Bot</a
@@ -1721,7 +1844,7 @@
                       </div>
                       <div class="margin-top margin-medium">
                         <a
-                          href="https://t.me/myportrait_ai_bot"
+                          href="https://t.me/photobai_bot"
                           target="_blank"
                           class="button w-button"
                           >Try It</a
@@ -1838,7 +1961,7 @@
                       </div>
                       <div class="margin-top margin-medium">
                         <a
-                          href="https://t.me/myportrait_ai_bot"
+                          href="https://t.me/photobai_bot"
                           target="_blank"
                           class="button w-button"
                           >Choose Package</a
@@ -1958,7 +2081,7 @@
                       </div>
                       <div class="margin-top margin-medium">
                         <a
-                          href="https://t.me/myportrait_ai_bot"
+                          href="https://t.me/photobai_bot"
                           target="_blank"
                           class="button w-button"
                           >Choose Package</a
@@ -2075,7 +2198,7 @@
                       </div>
                       <div class="margin-top margin-medium">
                         <a
-                          href="https://t.me/myportrait_ai_bot"
+                          href="https://t.me/photobai_bot"
                           target="_blank"
                           class="button w-button"
                           >Start Your Photoshoot</a
@@ -2115,7 +2238,7 @@
                 </div>
                 <div class="button-group">
                   <a
-                    href="https://t.me/myportrait_ai_bot"
+                    href="https://t.me/photobai_bot"
                     target="_blank"
                     class="button is-small w-button"
                     >Open the Telegram Bot</a
@@ -2858,7 +2981,7 @@
                           <div class="margin-top margin-medium">
                             <div class="button-group is-center">
                               <a
-                                href="https://t.me/myportrait_ai_bot"
+                                href="https://t.me/photobai_bot"
                                 class="button-2 is-secondary w-button"
                                 >Contact Us</a
                               >
@@ -2897,7 +3020,7 @@
                 </div>
                 <div class="button-group">
                   <a
-                    href="https://t.me/myportrait_ai_bot"
+                    href="https://t.me/photobai_bot"
                     target="_blank"
                     class="button is-small w-button"
                     >Telegram Bot</a
@@ -2926,7 +3049,7 @@
                       <div class="margin-top margin-medium">
                         <div class="button-group">
                           <a
-                            href="https://t.me/myportrait_ai_bot"
+                            href="https://t.me/photobai_bot"
                             target="_blank"
                             class="button w-button"
                             >Start Your Photoshoot in Telegram</a
